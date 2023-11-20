@@ -43,6 +43,11 @@ async function main() {
   //   }
   // });
 
+
+  app.get("/api/current-week", async (req, res) => {
+      res.json(11);
+  }); 
+  
   app.use(bodyParser.json());
 
   app.post("/api/nfl/player-batch", async (req, res) => {
