@@ -71,7 +71,7 @@ async function updatePlayers(collection) {
         if (actualWeeks[i] !== null) {
           currWeek = i;
         }
-        if(actualWeeks[i].stats?.gms_active){
+        if(actualWeeks[i]?.stats?.gms_active){
           activeWeeks++; 
         }
       }
@@ -218,10 +218,11 @@ const fs = require("fs").promises;
 
 async function loadPlayers() {
   let allPlayerData = await fs.readFile(
-    "C:\\SatcomStuff\\players.json",
+    "C:/Users/him/Desktop/webapp/nfl.json",
     "utf8"
   );
   return JSON.parse(allPlayerData);
+  
 }
 
 let allPlayerIds = [
